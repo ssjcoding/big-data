@@ -17,8 +17,14 @@ public class PubSubDemo{
 
 		System.out.println(String.format("redis pool is starting, redis ip %s, redis port %d", "127.0.0.1", 6379));
 
-		SubThread subThread = new SubThread(jedisPool);  //订阅者
+		SubThread subThread = new SubThread(jedisPool);  //订阅者1
 		subThread.start();
+
+		SubThread subThread2 = new SubThread(jedisPool);  //订阅者2
+		subThread2.start();
+
+		SubThread subThread3 = new SubThread(jedisPool);  //订阅者2
+		subThread3.start();
 
 		Publisher publisher = new Publisher(jedisPool);    //发布者
 		publisher.start();

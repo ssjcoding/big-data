@@ -15,7 +15,7 @@ public class Subscriber extends JedisPubSub{
 	public Subscriber(){}
 	@Override
 	public void onMessage(String channel, String message) {       //收到消息会调用
-		System.out.println(String.format("receive redis published message, channel %s, message %s", channel, message));
+		System.out.println(String.format("%s receive redis published message, channel %s, message %s", Thread.currentThread().getName(), channel, message));
 		try{TimeUnit.SECONDS.sleep(10);}catch(InterruptedException e){e.printStackTrace();}
 	}
 	@Override
