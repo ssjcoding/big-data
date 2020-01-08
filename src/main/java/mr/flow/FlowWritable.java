@@ -1,6 +1,6 @@
 package mr.flow;
 
-import org.apache.hadoop.io.WritableComparable;
+import org.apache.hadoop.io.Writable;
 
 import java.io.DataInput;
 import java.io.DataOutput;
@@ -14,7 +14,7 @@ import java.io.IOException;
  * @version 1.0v.
  * @Create 2020/1/9 1:52 AM,
  */
-public class FlowWritable implements WritableComparable{
+public class FlowWritable implements Writable{
 
 	//必须具有一个空参构造器，因为mr会调用此对象的反射机制
 	public FlowWritable(){}
@@ -39,11 +39,6 @@ public class FlowWritable implements WritableComparable{
 	 * 总流量
 	 */
 	private long sumFlow;
-
-	@Override
-	public int compareTo(Object o){
-		return 0;
-	}
 
 	/**
 	 * 序列化方法		通过out交给框架
