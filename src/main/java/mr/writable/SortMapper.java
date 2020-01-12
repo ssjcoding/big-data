@@ -23,7 +23,9 @@ public class SortMapper extends Mapper<LongWritable, Text, FlowWritable, Text>{
 		String[] paras = line.split("\t");
 		if(paras.length == 4){
 			this.phone.set(paras[0]);
-			this.flowWritable.set(Long.valueOf(paras[1]), Long.valueOf(paras[2]));
+			this.flowWritable.setUpFlow(Long.valueOf(paras[1]));
+			this.flowWritable.setDownFlow(Long.valueOf(paras[2]));
+			this.flowWritable.setSumFlow(Long.valueOf(paras[3]));
 			context.write(this.flowWritable, this.phone);
 		}
 	}
