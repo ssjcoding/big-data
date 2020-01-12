@@ -1,6 +1,7 @@
 package mr.writable;
 
 import mr.flow.FlowWritable;
+import mr.partition.MyPartition;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.Text;
@@ -30,6 +31,8 @@ import java.io.IOException;
  *		13956435636	132		1512	1644
  *		13846544121	264		0		264
  *
+ *		新增加一个按省份分区工程
+ *
  * @author tonysu,
  * @version 1.0v.
  * @Create 2020/1/12 1:58 PM,
@@ -51,6 +54,10 @@ public class FlowDriver{
 		job.setMapOutputValueClass(Text.class);
 		job.setOutputKeyClass(Text.class);
 		job.setOutputValueClass(FlowWritable.class);
+
+		//设置Partition
+		job.setPartitionerClass(MySortPartition.class);
+		job.setNumReduceTasks(5);
 
 		//5、设置输入输出数据
 		FileInputFormat.setInputPaths(job, new Path("/Users/tony/bigdata/output"));
