@@ -1,4 +1,4 @@
-package leetcode.LinkedList;
+package leetcode.linkedlist;
 
 import java.util.HashSet;
 import java.util.Set;

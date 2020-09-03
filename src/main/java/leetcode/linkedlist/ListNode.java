@@ -1,4 +1,4 @@
-package leetcode.LinkedList;
+package leetcode.linkedlist;
 
 /**
  * 链表节点

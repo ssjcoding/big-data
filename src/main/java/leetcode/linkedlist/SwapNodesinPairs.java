@@ -1,4 +1,4 @@
-package leetcode.LinkedList;
+package leetcode.linkedlist;
 
 /**
  * 	leetcode path: https://leetcode.com/problems/swap-nodes-in-pairs/description/

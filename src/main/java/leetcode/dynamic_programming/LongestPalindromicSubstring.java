@@ -1,4 +1,4 @@
-package leetcode.DynamicProgramming;
+package leetcode.dynamic_programming;
 
 /**
  * 最大回文串
