@@ -1,4 +1,6 @@
-import java.util.Hashtable;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
 
 /**
  * ${DESCRIPTION}
@@ -9,9 +11,20 @@ import java.util.Hashtable;
  */
 public class Main{
 	public static void main(String[] args) throws InterruptedException{
-		Hashtable hashtable = new Hashtable();
-		String a = "";
-		a.hashCode();
+		Collection<String> coll = new ArrayList<>();
+		coll.add("abc1");
+		coll.add("abc2");
+		coll.add("abc3");
+		coll.add("abc4");
+
+		Iterator<String> it = coll.iterator();
+		while(it.hasNext()){
+			System.out.println(it.next());
+		}
+
+		for(Iterator it2=coll.iterator(); it2.hasNext();){
+			System.out.println(it2.next());
+		}
 	}
 
 }

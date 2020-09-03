@@ -19,7 +19,7 @@ public class OutputDriver{
 
 	public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException{
 		Job job = Job.getInstance(new Configuration());
-
+		job.setJarByClass(OutputDriver.class);
 		job.setOutputFormatClass(MyOutputFormat.class);
 		FileInputFormat.setInputPaths(job, new Path("/Users/tony/bigdata/input"));
 		FileOutputFormat.setOutputPath(job, new Path("/Users/tony/bigdata/output"));
