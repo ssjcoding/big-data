@@ -61,11 +61,11 @@ public class EditDistance {
     public static int dp(String s1, String s2, int i, int j) {
         //s1移动到头
         if (i == -1) {
-            return j;
+            return j+1;
         }
         //s2移动到头
         if (j == -1) {
-            return i;
+            return i+1;
         }
         if (s1.charAt(i) == s2.charAt(j)) {
             // 相等，上都不做
@@ -73,11 +73,11 @@ public class EditDistance {
         } else {
             return min(
                     // 删除
-                    dp(s1, s2, i - 1, j) + 1,
+                    dp(s1, s2, i-1, j) + 1,
                     // 添加
-                    dp(s1, s2, i, j - 1) + 1,
+                    dp(s1, s2, i, j-1) + 1,
                     // 替换
-                    dp(s1, s2, i - 1, j) + 1
+                    dp(s1, s2, i-1, j-1) + 1
             );
         }
     }
@@ -100,7 +100,7 @@ public class EditDistance {
         }
         // 自底向上
         for (int i = 1; i <= m; i++) {
-            for (int j = 1; i <= n; j++) {
+            for (int j = 1; j <= n; j++) {
                 if (s1.charAt(i - 1) == s2.charAt(j - 1)) {
                     dp[i][j] = dp[i - 1][j - 1];
                 } else {
