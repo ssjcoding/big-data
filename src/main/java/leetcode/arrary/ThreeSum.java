@@ -3,7 +3,11 @@ package leetcode.arrary;
 import java.util.*;
 
 /**
- * 三个整数求和
+ * 题目：三个整数求和
+ *
+ * 描述：给你一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，使得 a + b + c = 0 ？请你找出所有和为 0 且不重复的三元组。
+ *
+ * 注意：答案中不可以包含重复的三元组。
  *
  * @author tonysu,
  * @version 1.0v.
@@ -12,10 +16,10 @@ import java.util.*;
 public class ThreeSum{
 
 	public static void main(String[] args){
-		int[] test = {-1, 0, 1, 2, -1, -4};
-//		int[] test = {-1, 0, 1};
-		ThreeSum threeSum = new ThreeSum();
-		List<List<Integer>> result = threeSum.threeSum(test);
+//		int[] test = {-1, 0, 1, 2, -1, -4};
+		int[] test = {0, 0, 0};
+		List<List<Integer>> result = threeSum_1(test);
+		System.out.println();
 		System.out.println("---------------------------------------------------");
 		for(List<Integer> list : result){
 			if(list.size() == 3){
@@ -168,5 +172,43 @@ public class ThreeSum{
 		return result;
 	}
 
-
+	/**
+	 * 优化后的算法
+	 */
+	public static List<List<Integer>> threeSum_1(int[] nums){
+		List<List<Integer>> result = new ArrayList<>();
+		if(nums.length>=3){
+			//排序
+			Arrays.sort(nums, 0, nums.length);
+			for(int num : nums){
+				System.out.print(num);
+				System.out.print(",");
+			}
+			if(nums[0] + nums[1] + nums[2]<=0){
+				//寻找
+				for(int i=0; i<nums.length; i++){
+					if (i > 0 && nums[i] == nums[i - 1]) {
+						continue;
+					}
+					int target = 0 - nums[i];
+					int start = i+1;
+					int end = nums.length-1;
+					while(start<end) {
+						if(nums[start] + nums[end]<target) {
+							start++;
+						}else if(nums[start] + nums[end]>target) {
+							end--;
+						} else {
+							result.add(Arrays.asList(nums[i], nums[start], nums[end]));
+							start++;
+							end--;
+							while(start<end && nums[start] == nums[start-1]) start++;
+							while(start>end && nums[end] == nums[end+1]) end++;
+						}
+					}
+				}
+			}
+		}
+		return result;
+	}
 }
