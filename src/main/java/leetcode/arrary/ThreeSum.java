@@ -3,7 +3,7 @@ package leetcode.arrary;
 import java.util.*;
 
 /**
- * ${DESCRIPTION}
+ * 三个整数求和
  *
  * @author tonysu,
  * @version 1.0v.

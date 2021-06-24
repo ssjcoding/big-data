@@ -22,7 +22,7 @@ package sort;
 public class BubbleSort{
 
 	/**
-	 * 排序函数
+	 * 冒泡排序
 	 *
 	 * @param data  输入数组
 	 * @param order 排序方式：

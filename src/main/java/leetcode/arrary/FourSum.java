@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * ${DESCRIPTION}
+ * 四个整数求和
  *
  * @author tonysu,
  * @version 1.0v.
