@@ -180,10 +180,6 @@ public class ThreeSum{
 		if(nums.length>=3){
 			//排序
 			Arrays.sort(nums, 0, nums.length);
-			for(int num : nums){
-				System.out.print(num);
-				System.out.print(",");
-			}
 			if(nums[0] + nums[1] + nums[2]<=0){
 				//寻找
 				for(int i=0; i<nums.length; i++){
