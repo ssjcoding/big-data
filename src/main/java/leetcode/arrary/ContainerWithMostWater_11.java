@@ -17,7 +17,7 @@ package leetcode.arrary;
  * @version 1.0v.
  * @Create 2019/3/5 2:11 PM,
  */
-public class ContainerWithMostWater{
+public class ContainerWithMostWater_11 {
 
 	public int getMaxArea(int[] height){
 		if(height.length == 0){
@@ -42,9 +42,9 @@ public class ContainerWithMostWater{
 
 
 	public static void main(String[] args){
-		ContainerWithMostWater containerWithMostWater = new ContainerWithMostWater();
+		ContainerWithMostWater_11 containerWithMostWater11 = new ContainerWithMostWater_11();
 		int[] height = {1,3,2,5,25,24,5};
-		int result  = containerWithMostWater.getMaxArea(height);
+		int result  = containerWithMostWater11.getMaxArea(height);
 		System.out.println(result);
 	}
 

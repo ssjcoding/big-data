@@ -13,7 +13,7 @@ import java.util.*;
  * @version 1.0v.
  * @Create 2019/10/21 10:13 AM,
  */
-public class ThreeSum{
+public class ThreeSum_15 {
 
 	public static void main(String[] args){
 //		int[] test = {-1, 0, 1, 2, -1, -4};

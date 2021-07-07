@@ -22,12 +22,12 @@ import java.util.List;
  * @version 1.0v.
  * @Create 2019/11/18 10:37 PM,
  */
-public class FourSum{
+public class FourSum_18 {
 	public static void main(String[] args){
 		int[] test = {1, 0, -1, 0, -2, 2};
-		FourSum fourSum = new FourSum();
+		FourSum_18 fourSum18 = new FourSum_18();
 		int target=0;
-		List<List<Integer>> result = fourSum.fourSum(test, target);
+		List<List<Integer>> result = fourSum18.fourSum(test, target);
 		System.out.println("---------------------------------------------------");
 		for(List<Integer> list : result){
 			if(list.size() == 4){

@@ -36,7 +36,7 @@ import java.util.Arrays;
  * @version 1.0
  * @since 2021/7/5 11:37 上午
  */
-public class NextPermutation {
+public class NextPermutation_27 {
     public static void main(String[] args) {
         int[] nums = {1,3,2};
         nextPermutation(nums);

@@ -1,6 +1,7 @@
 package leetcode.arrary;
 
 /**
+ * 题目：寻找两个正序数组的中位数
  * 给定两个大小分别为 m 和 n 的正序（从小到大）数组 nums1 和 nums2。请你找出并返回这两个正序数组的 中位数 。
  * 示例 1：
  *      输入：nums1 = [1,3], nums2 = [2]
@@ -18,7 +19,7 @@ package leetcode.arrary;
  * @version 1.0
  * @since 2021/6/24 2:33 下午
  */
-public class FindMedianSortedArrays {
+public class FindMedianSortedArrays_4 {
     public static void main(String[] args) {
         int[] nums1 = {1,3};
         int[] nums2 = {3,4};

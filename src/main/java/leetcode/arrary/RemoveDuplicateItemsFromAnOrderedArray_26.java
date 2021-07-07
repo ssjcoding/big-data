@@ -35,7 +35,7 @@ import java.util.Arrays;
  * @version 1.0
  * @since 2021/6/28 6:19 下午
  */
-public class RemoveDuplicateItemsFromAnOrderedArray {
+public class RemoveDuplicateItemsFromAnOrderedArray_26 {
     public static void main(String[] args) {
         int[] nums = {1,1,2};
         System.out.println(removeDuplicates(nums));
