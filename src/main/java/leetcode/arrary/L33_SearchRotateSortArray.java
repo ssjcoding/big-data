@@ -30,7 +30,7 @@ package leetcode.arrary;
  * @version 1.0
  * @since 2021/7/7 10:40 上午
  */
-public class SearchRotateSortArray_33 {
+public class L33_SearchRotateSortArray {
     public static void main(String[] args) {
         int[] nums = {5,1,2,3,4};
         System.out.println(search(nums, 1));

@@ -19,7 +19,7 @@ package leetcode.arrary;
  * @version 1.0
  * @since 2021/6/24 2:33 下午
  */
-public class FindMedianSortedArrays_4 {
+public class L4_FindMedianSortedArrays_4 {
     public static void main(String[] args) {
         int[] nums1 = {1,3};
         int[] nums2 = {3,4};

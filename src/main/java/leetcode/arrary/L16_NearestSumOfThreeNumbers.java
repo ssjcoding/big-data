@@ -21,7 +21,7 @@ import java.util.Arrays;
  * @version 1.0
  * @since 2021/6/25 12:12 下午
  */
-public class NearestSumOfThreeNumbers_16 {
+public class L16_NearestSumOfThreeNumbers {
     public static void main(String[] args) {
         int[] a = {-1, 2, 1, -4};
         System.out.println(threeSumClosest(a, 1));
