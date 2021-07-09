@@ -22,7 +22,7 @@ import java.util.Map;
  * @version 1.0v.
  * @Create 2018/3/2 下午2:23,
  */
-public class L1_AddTwoSum {
+public class LeetCode_1_AddTwoSum {
 
 	/**
 	 * my solution

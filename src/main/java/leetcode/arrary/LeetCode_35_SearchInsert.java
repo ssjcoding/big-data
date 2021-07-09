@@ -18,7 +18,7 @@ package leetcode.arrary;
  * @version 1.0
  * @since 2021/7/8 5:59 下午
  */
-public class L35_SearchInsert {
+public class LeetCode_35_SearchInsert {
     public static void main(String[] args) {
         int[] nums = {1,3,5,6};
         System.out.println(searchInsert(nums, 0));

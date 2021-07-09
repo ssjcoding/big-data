@@ -34,7 +34,7 @@ import java.util.Arrays;
  * @version 1.0
  * @since 2021/7/1 4:08 下午
  */
-public class L27_RemoveElement {
+public class LeetCode_27_RemoveElement {
     public static void main(String[] args) {
         int[] nums = {1,1};
         System.out.println(removeElement(nums, 2));

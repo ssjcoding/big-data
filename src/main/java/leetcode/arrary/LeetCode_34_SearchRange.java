@@ -27,7 +27,7 @@ import akka.actor.FSM;
  * @version 1.0
  * @since 2021/7/8 5:41 下午
  */
-public class L34_SearchRange {
+public class LeetCode_34_SearchRange {
 
     public static void main(String[] args) {
         int[] nums = {5,7,7,8,8,10};
