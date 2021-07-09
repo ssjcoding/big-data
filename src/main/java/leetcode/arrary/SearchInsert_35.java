@@ -21,10 +21,31 @@ package leetcode.arrary;
 public class SearchInsert_35 {
     public static void main(String[] args) {
         int[] nums = {1,3,5,6};
-        System.out.println(searchInsert(nums, 5));
+        System.out.println(searchInsert(nums, 0));
     }
 
     public static int searchInsert(int[] nums, int target) {
-        return 0;
+        if(nums==null || nums.length<1){
+            return 0;
+        }
+        int left = 0;
+        int right = nums.length-1;
+        int mid = (left+right)/2;
+        while(left<=right){
+            if(nums[mid]>target){
+                right = mid-1;
+            }else if(nums[mid]<target){
+                left = mid+1;
+            }else {
+                return mid;
+            }
+            mid = (left+right)/2;
+        }
+
+        if(nums[mid]>target){
+            return mid;
+        }else {
+            return mid+1;
+        }
     }
 }
