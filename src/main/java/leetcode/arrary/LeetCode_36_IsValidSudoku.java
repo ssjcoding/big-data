@@ -1,5 +1,7 @@
 package leetcode.arrary;
 
+import scala.None;
+
 /**
  * 题目：有效的数独
  *
@@ -50,5 +52,42 @@ package leetcode.arrary;
  * @since 2021/7/9 3:42 下午
  */
 public class LeetCode_36_IsValidSudoku {
+    public static void main(String[] args) {
+        char[][] board = {{'8','3','.','.','7','.','.','.','.'}
+                ,{'6','.','.','1','9','5','.','.','.'}
+                ,{'.','9','8','.','.','.','.','6','.'}
+                ,{'8','.','.','.','6','.','.','.','3'}
+                ,{'4','.','.','8','.','3','.','.','1'}
+                ,{'7','.','.','.','2','.','.','.','6'}
+                ,{'.','6','.','.','.','.','2','8','.'}
+                ,{'.','.','.','4','1','9','.','.','5'}
+                ,{'.','.','.','.','8','.','.','7','9'}};
+        System.out.println(isValidSudoku(board));
+    }
 
+    /**
+     * 用三个二维数组存储当前数字在当前行、当前列、当前3*3小方格内是否已经出现过， 出现过为true否则为false
+     * @param board
+     * @return
+     */
+    public static boolean isValidSudoku(char[][] board) {
+        boolean[][] row=new boolean[9][10];
+        boolean[][] col=new boolean[9][10];
+        boolean[][] fangge=new boolean[9][10];
+        for(int i=0;i<9;i++){
+            for(int j=0;j<9;j++){
+                char c=board[i][j];
+                if(c!='.'){
+                    int num=Integer.valueOf(String.valueOf(c));//字符转数字
+                    if(row[i][num]||col[j][num]||fangge[i/3*3+j/3][num]){
+                        return false;
+                    }
+                    row[i][num]=true;
+                    col[j][num]=true;
+                    fangge[i/3*3+j/3][num]=true;//当前是第几个小方格
+                }
+            }
+        }
+        return true;
+    }
 }
