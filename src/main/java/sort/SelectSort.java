@@ -29,7 +29,7 @@ public class SelectSort {
     public static int[] sort(int[] data){
 
         if(data.length == 0 || data == null){
-            throw new NullPointerException("数组为空");
+            return data;
         }
 
         if(data.length == 1){
