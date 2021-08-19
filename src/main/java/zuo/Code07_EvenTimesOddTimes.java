@@ -22,6 +22,22 @@ public class Code07_EvenTimesOddTimes {
 
     /**
      * 题目：
+     *  输出二进制为1的位数
+     * @param num
+     * @return
+     */
+    public static void bit1Counts(int num){
+        int count=0;
+        while(num != 0){
+            int rightOne = num & ((~num) + 1);
+            count++;
+            num ^= rightOne;
+        }
+        System.out.println(count);
+    }
+
+    /**
+     * 题目：
      *  一个数组中有一种数出现了奇数次，其他数都出现了偶数次，怎么找到并打印这种数
      * 思路：
      *  采用异或操作，遍历一遍，剩下的数据即为此数
@@ -53,8 +69,9 @@ public class Code07_EvenTimesOddTimes {
         }
 
         int eor1 = 0;
+        int rightOne = eor&(~eor+1);
         for(int i=0; i<arr.length; i++){
-            if((arr[i] & (eor&(~eor+1)))>0){
+            if((arr[i] & rightOne) != 0){
                 eor1 = eor1^arr[i];
             }
         }
@@ -66,7 +83,8 @@ public class Code07_EvenTimesOddTimes {
 
     public static void main(String[] args) {
 //        printRightOne(12);
-        int[] array = {1,1,1,1,2,2,2,2,3,3,3,5,5,5,5,0,0,0,0,1};
-        printOddTimesNum2(array);
+//        int[] array = {1,1,1,1,2,2,2,2,3,3,3,5,5,5,5,0,0,0,0,1};
+//        printOddTimesNum2(array);
+        bit1Counts(7);
     }
 }
